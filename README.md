@@ -19,6 +19,3 @@ The build libdart.so, and the python wrapper by running
 make 
 ```
 
-Current issues:
-- seems to be crashing the kernel when reading the namelist. Work around for this interpolation
- code is not calling namelist read. 
