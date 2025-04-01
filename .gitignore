@@ -3,3 +3,9 @@
 *.a
 *.so
 *.exe
+# DART build files
+dartlib/Makefile
+dartlib/dart_log.nml
+dartlib/dart_log.out
+dartlib/input.nml.libdart.so_default
+dartlib/preprocess

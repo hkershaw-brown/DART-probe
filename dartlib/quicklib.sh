@@ -10,6 +10,10 @@ main() {
 export DART="/Users/hkershaw/DART/Projects/Interpolation/DART"
 source "$DART"/build_templates/buildfunctions.sh
 
+# replace relative paths in &preprocess namelist
+sed -i '' "s|\.\./\.\./\.\.|$DART|g" input.nml
+
+
 MODEL=cice
 LOCATION=threed_sphere
 
