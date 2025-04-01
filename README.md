@@ -1,11 +1,24 @@
 ## Using python to call DART
 
+To build DART, set DART in dartlib/quickbuild.sh to whereever your DART repo is
 
-* Build DART as a library, example mkmf.template in this directory, 
+e.g.
 
-Compile wrapper module, link to DART library libdart.so
+```
+main() {
 
-f2py -c -m ice_interp ice_interp_mod.f90 -L/Users/hkershaw/DART/Projects/Interpolation/DART/models/cice/work -ldart -I/Users/hkershaw/DART/Projects/Interpolation/DART/models/cice/work --fcompiler=gfortran
+export DART="/Users/hkershaw/DART/Projects/Interpolation/DART"
+source "$DART"/build_templates/buildfunctions.sh
+```
 
+Use the mkmf.template in this directory to build dart with -fPIC
 
+The build libdart.so, and the python wrapper by running 
 
+```
+make 
+```
+
+Current issues:
+- seems to be crashing the kernel when reading the namelist. Work around for this interpolation
+ code is not calling namelist read. 
