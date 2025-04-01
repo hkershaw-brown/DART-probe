@@ -192,7 +192,7 @@
 
 
 &location_nml
-   horiz_dist_only      = .true.
+   horiz_dist_only      = .false.
    approximate_distance = .false.
    nlon                 = 71
    nlat                 = 36
@@ -205,7 +205,7 @@
    module_details = .false.
    logfilename    = 'dart_log.out'
    nmlfilename    = 'dart_log.nml'
-   write_nml      = 'file'
+   write_nml      = 'none'
    /
 
 

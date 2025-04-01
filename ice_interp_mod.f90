@@ -1,12 +1,16 @@
 module ice_interp_mod
 
 use model_mod, only: quad_idw_interp
-use utilities_mod, only: initialize_utilities
+use utilities_mod, only: initialize_utilities, set_output
 
 implicit none
 
-public :: quad_idw_interp_f2py
+public :: quad_idw_interp_f2py, init
 contains
+
+subroutine init()
+    call initialize_utilities()! standalone_program=.true.) ! standalone means namelists are not read
+end subroutine init
 
 subroutine quad_idw_interp_f2py(lon_in, lat, x_corners, y_corners, p, expected_obs)
 
@@ -20,8 +24,6 @@ real(8), intent(in)     :: y_corners(4) ! Quadrilateral corner latitudes (degree
 real(8), intent(in)     :: p(4)         ! Values at the quadrilateral corners
 real(8), intent(out)    :: expected_obs ! Interpolated value at (lon, lat)
 
-
-call initialize_utilities(standalone_program=.true.)
 call quad_idw_interp(lon_in, lat, x_corners, y_corners, p, expected_obs)
 
 end subroutine quad_idw_interp_f2py
