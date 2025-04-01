@@ -13,6 +13,10 @@ source "$DART"/build_templates/buildfunctions.sh
 # replace relative paths in &preprocess namelist
 sed -i '' "s|\.\./\.\./\.\.|$DART|g" input.nml
 
+model_serial_programs=(
+cice_to_dart
+dart_to_cice
+)
 
 MODEL=cice
 LOCATION=threed_sphere

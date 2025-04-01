@@ -9,3 +9,5 @@ dartlib/dart_log.nml
 dartlib/dart_log.out
 dartlib/input.nml.libdart.so_default
 dartlib/preprocess
+dart_log
+dart_nml
