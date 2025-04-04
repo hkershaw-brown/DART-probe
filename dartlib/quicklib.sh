@@ -7,7 +7,8 @@
 main() {
 
 
-export DART="/Users/hkershaw/DART/Projects/Interpolation/DART"
+#export DART="/Users/hkershaw/DART/Projects/Interpolation/DART"
+export DART="/Users/hkershaw/DART/pull_requests/pull_848/"
 source "$DART"/build_templates/buildfunctions.sh
 
 # replace relative paths in &preprocess namelist
