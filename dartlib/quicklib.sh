@@ -8,19 +8,18 @@ main() {
 
 
 #export DART="/Users/hkershaw/DART/Projects/Interpolation/DART"
-export DART="/Users/hkershaw/DART/pull_requests/pull_848/"
+export DART="/Users/hkershaw/DART/issues/large_interp_residual/DART"
 source "$DART"/build_templates/buildfunctions.sh
 
 # replace relative paths in &preprocess namelist
 sed -i '' "s|\.\./\.\./\.\.|$DART|g" input.nml
 
-model_serial_programs=(
-cice_to_dart
-dart_to_cice
-)
-
-MODEL=cice
+MODEL=MOM6
 LOCATION=threed_sphere
+
+programs=(
+filter
+)
 
 # quickbuild arguments
 arguments "$@"
