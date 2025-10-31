@@ -27,3 +27,8 @@ Requirements:
 numpy for f2py (pip install numpy)
 meson (pip install meson)
 ninja (installed binary)
+
+For notebooks:
+pip install jupyter
+pip install matplotlib
+pip install ipympl
