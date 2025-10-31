@@ -1,7 +1,7 @@
 # Variables
 DARTLIB_DIR = dartlib
-FORTRAN_MODULE = ice_interp_mod.f90
-PYTHON_MODULE = ice_interp
+FORTRAN_MODULE = quad_interp_mod.f90
+PYTHON_MODULE = quad_interp
 LIBDART_LINK = libdart.so
 
 # Default target
