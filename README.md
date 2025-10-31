@@ -23,3 +23,7 @@ The build libdart.so, and the python wrapper by running
 make 
 ```
 
+Requirements:
+numpy for f2py (pip install numpy)
+meson (pip install meson)
+ninja (installed binary)
